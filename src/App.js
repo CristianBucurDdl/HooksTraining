@@ -1,4 +1,5 @@
 import "./App.css";
+import UseEffectHook from "./useEffect/useEffect";
 import UseStateHook from "./useState/useState";
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       hello test
       <br />
       <UseStateHook />
+      <br />
+      <UseEffectHook />
     </div>
   );
 }

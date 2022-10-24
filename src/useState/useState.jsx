@@ -17,7 +17,7 @@ export default function UseStateHook() {
           //coding practice , use :prev"initialstate" => prev"initial
           // state" and function
           //eg:
-          setCount(count - 2);
+          setCount(count - 1);
           //   setCount(count - 1);
         }}
       >
