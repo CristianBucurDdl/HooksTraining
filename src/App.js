@@ -1,6 +1,8 @@
 import "./App.css";
 import UseEffectHook from "./useEffect/useEffect";
+import UseMemoHook from "./useMemo/useMemoHook";
 import UseStateHook from "./useState/useState";
+
 function App() {
   return (
     <div>
@@ -9,6 +11,8 @@ function App() {
       <UseStateHook />
       <br />
       <UseEffectHook />
+      <br />
+      <UseMemoHook />
     </div>
   );
 }
