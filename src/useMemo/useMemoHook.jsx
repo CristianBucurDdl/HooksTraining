@@ -8,18 +8,19 @@ export default function UseMemoHook() {
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
   }, [number]);
-  //   const doubleNumber = useEffect(() => {
-  //     return slowFunction(number);
-  //   }, [number]);
+  //useMemo is a optimisation hook ,so you don't rerender in case your parameter is actually changed
+  // for example , you have a slow function , and don't whant to
+  // re render every time , You can call it only if the parameter is changed
+  //or if you have a large object with functionality , you can wrap it in a useMemo
+  //so you can render it ony if a parameter is changed
 
-  const themeStyle = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black",
-  };
-  //   let doubleNumber = 0;
-  //   useEffect(() => {
-  //     slowFunction(number);
-  //   }, [number]);
+  //eg:
+  const themeStyle = useMemo(() => {
+    return {
+      backgroundColor: dark ? "black" : "white",
+      color: dark ? "white" : "black",
+    };
+  }, [dark]);
 
   return (
     <div>
