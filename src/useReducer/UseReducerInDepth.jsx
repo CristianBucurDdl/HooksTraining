@@ -34,7 +34,7 @@ export default function SecondReducer() {
     dispatch({ type: ACTIONS.ADD_TODO, payload: { names: names } });
     setNames("");
   }
-  //   console.log(todos);
+  console.log(todos);
   return (
     <div>
       <h1>SecondReducer:</h1>
@@ -51,7 +51,7 @@ export default function SecondReducer() {
           <div>
             <span style={{ color: todos.complete ? "#000" : "#AAA" }}>
               {todos.name}
-              {todos.complete ? "true" : "fa;se"}
+              {todos.complete ? "true" : "false"}
             </span>
             <button
               onClick={() => {
@@ -79,3 +79,47 @@ export default function SecondReducer() {
     </div>
   );
 }
+
+// so to create a proper useDispatch:
+
+// main components :
+
+// const Actions ={
+// DO_SOMETHING:" do-something"
+//     usually an object that contains actions that will be called on different use
+//     cases of modifying the state stricture
+// }
+
+///////////////////////
+//then you need to create the main useReducer :
+
+//const [stateDeclare,dispatch] = useReducer(reducer,[] )
+
+// here you declare the state and function you will call to let the reducer modify and change the state//
+// then you implement the useReducer hook witch takes to parameters :
+//the reducer function or the function that contains the logic of how the state will be changed
+// and when (conditions if needed  )
+
+/////////////////////////
+//then there is the actual reducer
+
+// function reducer (state , actions){
+
+// switch(action.type){
+
+//  case ACTION.DO_SOMETHING :
+//      return ACTION.DO_SOMETHING
+//  return functionality of how the state will change
+
+//  default: return state
+// }
+
+// }
+
+///////////////////
+//final step :
+
+// you call the dispatch() function  where you need or want
+//if you call it with no props . it runs the reducer function if you have only one logic
+//but if you have different case and use swich . than :
+//you pass { then:ACTION.DOSOMETHING ,payload: {proName:dataToPass}}

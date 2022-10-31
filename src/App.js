@@ -4,6 +4,7 @@ import UseEffectHook from "./useEffect/useEffect";
 import UseMemoHook from "./useMemo/useMemoHook";
 import UseReducer from "./useReducer/UseReducer";
 import SecondReducer from "./useReducer/UseReducerInDepth";
+import UseReducerPractice from "./useReducer/UseReducerPractice";
 import UseRefHook from "./useRef/UseRefHook";
 import UseStateHook from "./useState/useState";
 
@@ -25,6 +26,9 @@ function App() {
       <UseContext />
       <br />
       <SecondReducer />
+      <bt />
+      <UseReducerPractice />
+      <br />
     </div>
   );
 }
