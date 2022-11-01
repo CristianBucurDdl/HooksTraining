@@ -1,6 +1,8 @@
 import "./App.css";
+import UseCallBack from "./useCallBack/UseCallBack";
 import UseContext from "./useContext/UseContext";
 import UseEffectHook from "./useEffect/useEffect";
+import UseLayoutHook from "./useLayoute/UseLayoutHook";
 import UseMemoHook from "./useMemo/useMemoHook";
 import UseReducer from "./useReducer/UseReducer";
 import SecondReducer from "./useReducer/UseReducerInDepth";
@@ -12,6 +14,10 @@ function App() {
   return (
     <div>
       hello test
+      <br />
+      <UseCallBack />
+      <br />
+      <UseLayoutHook />
       <br />
       <UseStateHook />
       <br />
