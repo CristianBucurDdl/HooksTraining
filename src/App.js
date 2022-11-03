@@ -1,4 +1,5 @@
 import "./App.css";
+import CustomHook from "./customHook/CustomHook";
 import UseCallBack from "./useCallBack/UseCallBack";
 import UseContext from "./useContext/UseContext";
 import UseEffectHook from "./useEffect/useEffect";
@@ -14,6 +15,8 @@ function App() {
   return (
     <div>
       hello test
+      <br />
+      <CustomHook />
       <br />
       <UseCallBack />
       <br />
